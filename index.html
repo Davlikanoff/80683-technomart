@@ -8,7 +8,7 @@
 	<body>
 		<header class="main-header">
 			<div class="main-header-top">
-				<div class="container">
+				<div class="container clearfix">
 					<div class="main-header-logo">
 						<a href="index.html">
 							<img src="img/logo-header.png" width="116" height="18" alt="Техномарт">
@@ -31,8 +31,12 @@
 				</div>
 			</div>
 			<div class="main-header-bottom">
-				<div class="container">
+				<div class="container clearfix">
 					<p class="main-header-slogan">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+					<section class="main-header-user-block">
+						<a class="login" href="#">Войти</a>
+						<a class="sign-up" href="#">Регистрация</a>
+					</section>					
 					<section class="main-header-contacts">
 						<div class="tel">
 							+7 (812) 555-05-55
@@ -41,78 +45,76 @@
 							г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
 						</div>
 					</section>
-					<section class="main-header-user-block">
-						<a class="login" href="#">Войти</a>
-						<a class="sign-up" href="#">Регистрация</a>
-					</section>
-					<nav class="main-header-navigation">
-						<ul>
-							<li>
-								<a href="#">Главная</a>
-							</li>
-							<li>
-								<a href="#">Компания</a>
-							</li>
-							<li>
-								<a href="#">Каталог</a>
-							</li>
-							<li>
-								<a href="#">Новости</a>
-							</li>
-							<li>
-								<a href="#">Спецпредложения</a>
-							</li>
-							<li>
-								<a href="#">Доставка</a>
-							</li>
-							<li>
-								<a href="#">Контакты</a>
-							</li>
-						</ul>
-					</nav>
 				</div>
+				<nav class="main-header-navigation container">
+					<ul>
+						<li>
+							<a href="#">Главная</a>
+						</li>
+						<li>
+							<a href="#">Компания</a>
+						</li>
+						<li>
+							<a href="#">Каталог</a>
+						</li>
+						<li>
+							<a href="#">Новости</a>
+						</li>
+						<li>
+							<a href="#">Спецпредложения</a>
+						</li>
+						<li>
+							<a href="#">Доставка</a>
+						</li>
+						<li>
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</header>
 		<main class="main-page">
 			<div class="container">
-				<section class="catalogue-categories">
-					<div class="teaser materials new">
-						<p>Материалы</p>
-						<a class="btn" href="#">На любой вкус</a>
-					</div>
-					<div class="teaser tools">
-						<p>Инструмент</p>
-						<a class="btn" href="#">На все случаи</a>
-					</div>
-					<div class="teaser technics">
-						<p>Техника</p>
-						<a class="btn" href="#">Для стройки</a>
-					</div>
-				</section>
-				<section class="slider-promo">
-					<div class="slide perforator">
-						<h1>Перфораторы</h1>
-						<p class="desciption">Настроящие мужские игрушки</p>
-						<a class="btn" href="#">Открыть каталог</a>
-					</div>
-					<div class="slide drill">
-						<h1>Дрели</h1>
-						<p class="desciption">На радость соседям!</p>
-						<a class="btn" href="#">Открыть каталог</a>
-					</div>
-					<div class="nav-arrow left"></div>
-					<div class="nav-arrow right"></div>
-				</section>
-				<section class="features">
-					<div class="teaser discounts">
-						<p>Скидки 50%</p>
-						<a class="btn" href="#">На 350 товаров</a>
-					</div>
-					<div class="teaser delivery">
-						<p>Доставка</p>
-						<a class="btn" href="#">Бесплатно</a>
-					</div>
-				</section>
+				<div class="clearfix">
+					<section class="catalogue-categories">
+						<div class="teaser materials new">
+							<p>Материалы</p>
+							<a class="btn" href="#">На любой вкус</a>
+						</div>
+						<div class="teaser tools">
+							<p>Инструмент</p>
+							<a class="btn" href="#">На все случаи</a>
+						</div>
+						<div class="teaser technics">
+							<p>Техника</p>
+							<a class="btn" href="#">Для стройки</a>
+						</div>
+					</section>
+					<section class="slider-promo">
+						<div class="slide perforator">
+							<h1>Перфораторы</h1>
+							<p class="desciption">Настроящие мужские игрушки</p>
+							<a class="btn" href="#">Открыть каталог</a>
+						</div>
+						<div class="slide drill">
+							<h1>Дрели</h1>
+							<p class="desciption">На радость соседям!</p>
+							<a class="btn" href="#">Открыть каталог</a>
+						</div>
+						<div class="nav-arrow left"></div>
+						<div class="nav-arrow right"></div>
+					</section>
+					<section class="features">
+						<div class="teaser discounts">
+							<p>Скидки 50%</p>
+							<a class="btn" href="#">На 350 товаров</a>
+						</div>
+						<div class="teaser delivery">
+							<p>Доставка</p>
+							<a class="btn" href="#">Бесплатно</a>
+						</div>
+					</section>	
+				</div>
 				<section class="popular">
 					<header>
 						<h2>Популярные товары</h2>
@@ -210,32 +212,32 @@
 				</section>
 			</div>
 			<div class="services">
-				<div class="container">
+				<div class="container clearfix">
 					<h3>Сервисы</h3>
-					<p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-					<section class="services-tabs">
-						<ul>
-							<li class="current">Доставка</li>
-							<li>Гарантия</li>
-							<li>Кредит</li>
-						</ul>
-						<div class="services-tab-description">
+					<p class="intro">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+					<ul class="services-tabs">
+						<li class="current">Доставка</li>
+						<li>Гарантия</li>
+						<li>Кредит</li>
+					</ul>
+					<section class="services-description">
+						<div class="services-description-delivery">
 							<h4>Доставка</h4>
 							<p> Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш на этаж!</p>
 						</div>
-						<div class="services-tab-description">
+						<div class="services-description-guaranty">
 							<h4>Гарантия</h4>
 							<p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
 						</div>
-						<div class="services-tab-description">
+						<div class="services-description-credit">
 							<h4>Кредит</h4>
 							<p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
 							<a href="#" class="btn">Отправить заявку</a>
-						</div>
+						</div>						
 					</section>
 				</div>
 			</div>
-			<div class="container">
+			<div class="container clearfix">
 				<section class="about">
 					<h3>Компания «Техномарт»</h3>
 					<p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкномить на гастарбайтерах.</p>
@@ -259,8 +261,8 @@
 				</section>
 			</div>
 		</main>
-		<footer>
-			<div class="container">
+		<footer class="main-footer">
+			<div class="container clearfix">
 				<div class="left-column">
 					<div class="footer-logo">
 						<a href="index.html">
@@ -311,24 +313,25 @@
 				</div>
 			</div>
 			<div class="footer-bottom">
-				<div class="container">
+				<div class="container clearfix">
 					<section class="footer-copyright">
 						© 2010–2016 Компания «Техномарт»<br>
 						Все права защищены
+					</section>
+					<section class="footer-made-by">
+						Разработано —<br>
+						<a href="#">htmlacademy.ru</a>
+					</section>
+					<section class="footer-feedback">
+						Обратная связь:<br>
+						<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
 					</section>
 					<section class="footer-social">
 						<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
 						<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
 						<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
 					</section>
-					<section class="footer-feedback">
-						Обратная связь:<br>
-						<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-					</section>
-					<section class="footer-made-by">
-						Разработано —<br>
-						<a href="#">htmlacademy.ru</a>
-					</section>
+
 				</div>
 			</div>
 		</footer>

@@ -1,4 +1,14 @@
+/* ОБЩИЕ СТИЛИ -------------------- */
+
+
+/* ---- РАЗНОЕ */
+
+
 body {
+	min-width: 960px;
+	padding: 0;
+	margin: 0;
+
 	font-family: "Cuprum", "Arial", serif;
 	font-size: 18px;
 	font-weight: normal;
@@ -7,9 +17,184 @@ body {
 }
 
 h1 {
+	height: 89px;
+	margin: 0;
+	margin-bottom: 20px;
+
 	font-size: 30px;
 	line-height: 30px;
 	color: #32425c;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;
+}
+
+h3 {
+	margin: 0;
+	margin-bottom: 38px;
+	padding: 0;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.container {
+	width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;
+}
+
+
+/* ---- ШАПКА */
+
+
+.main-header {
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.main-header-top {
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.main-header-logo {
+	float: left;
+	width: 220px;
+	height: 42px;
+	margin-right: 10px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;		
+}
+
+.main-header-top  input[type="search"] {
+	float: left;
+	width: 240px;
+	height: 42px;
+
+	background: rgba(255, 0, 0, 0.25);
+}
+
+.main-header-shop-functions {
+	float: right;
+	width: 460px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;
+}
+
+.main-header-bottom {
+	padding-top: 46px;
+	padding-bottom: 60px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;
+}	
+
+p.main-header-slogan {
+	float: left;
+	max-width: 200px;
+	width: 200px;
+	margin: 0;
+	padding: 5px 50px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.main-header-user-block {
+	float: right;
+	width: 300px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.main-header-contacts {
+	margin-left: 320px;
+	margin-right: 320px; 
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.main-header-navigation {
+	margin-top: 40px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;		
+}
+
+
+/* ----  ПОДВАЛ */
+
+
+.main-footer {
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.left-column {
+	float: left;
+	width: 360px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.right-column {
+	float: right;
+	width: 550px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.footer-bottom {
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.footer-copyright {
+	float: left;
+	width: 360px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;
+}
+
+.footer-social,
+.footer-feedback,
+.footer-made-by {
+	float: right;
+	width: 140px;
+	max-width: 140px;
+	margin-left: 20px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;
+}
+
+.footer-social {
+	width: 230px;
+	max-width: 230px;
+}
+
+
+
+/* ГЛАВНАЯ СТРАНИЦА -------------------- */
+
+
+
+.main-page {
+	padding-bottom: 86px;
 }
 
 .main-page h1 {
@@ -17,4 +202,230 @@ h1 {
 	font-weight: bold;
 	line-height: 30px;
 	color: #ffffff;
+}
+
+.catalogue-categories {
+	margin-top: 60px;
+	margin-bottom: 20px;
+
+	font-size: 0;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;
+}
+
+.teaser {
+	display: inline-block;
+	vertical-align: top;
+	width: 300px;
+	height: 123px;
+	margin-right: 20px;
+
+	font-size: 18px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;
+}
+
+.teaser:nth-child(3n) {
+	margin-right: 0;
+}
+
+.slider-promo {
+	float: left;
+	max-width: 620px;
+}
+
+.features {
+	float: right;
+	max-width: 300px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.slide {
+	width: 620px;
+	height: 266px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;		
+}
+
+.features .teaser:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.popular {
+	margin-top: 53px;
+}
+
+.popular header,
+.manufacturers header {
+	height: 89px;
+	margin-bottom: 20px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;
+}
+
+.items-list {
+	margin-bottom: 21px;
+
+	font-size: 0;
+}
+
+.item{
+	display: inline-block;
+	vertical-align: top;
+	width: 220px;
+	height: 316px;
+	margin-right: 20px;
+
+	font-size: 18px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.popular .item:nth-child(4n),
+.manufacturers .item:nth-child(4n) {
+	margin-right: 0;
+}
+
+.manufacturers {
+	margin-bottom: 65px;]
+}
+
+.manufacturers .item {
+	height: 145px;
+	margin-bottom: 20px;
+}
+
+.services {
+	padding: 0;
+	padding-top: 66px;
+	margin: 0;
+	margin-bottom: 80px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;		
+}
+
+.services p.intro {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 64px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+ul.services-tabs {
+	float: left;
+	width: 240px;
+	margin: 0;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.services-description {
+	float: right;
+	width: 620px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.about {
+	float: left;
+	width: 560px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.contacts {
+	float: right;
+	width: 300px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+
+
+/* ВНУТРЕННЯЯ СТРАНИЦА -------------------- */
+
+
+
+.breadcrumbs {
+	margin: 0;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.filters {
+	float: left;
+	width: 220px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;
+}
+
+.filters p,
+.page-content .sorting {
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;
+}
+
+.page-content {
+	float: right;
+	width: 700px;
+	margin-bottom: 60px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;
+}
+
+.page-content .item:nth-child(3n) {
+	margin-right: 0;
+}
+
+.page-content .items-list {
+	margin-bottom: 31px;
+}
+
+.page-content .item {
+	height: 318px;
+	margin-bottom: 20px;
+}
+
+.pagination {
+	margin: 0;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;
+}
+
+.about-category {
+	padding-top: 66px;
+	padding-bottom: 73px;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;	
+}
+
+.about-category p {
+	padding: 0;
+	margin: 0;
+
+	background: rgba(255, 0, 0, 0.25);
+	outline: 1px solid white;		
 }
