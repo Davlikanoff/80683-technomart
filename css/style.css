@@ -15,10 +15,44 @@ body {
 	color: #000000;
 }
 
-input:focus::-webkit-input-placeholder { color: transparent; }
-input:focus:-moz-placeholder { color: transparent; }
-input:focus::-moz-placeholder { color: transparent; }
-input:focus:-ms-input-placeholder { color: transparent; }
+input:focus::-webkit-input-placeholder { 
+	color: transparent;
+}
+
+input:focus:-moz-placeholder { 
+	color: transparent; 
+}
+
+input:focus::-moz-placeholder { 
+	color: transparent; 
+}
+
+input:focus:-ms-input-placeholder { 
+	color: transparent; 
+}
+
+input:-ms-input-placeholder { 
+	color: #999999;
+}
+
+textarea::-webkit-input-placeholder { 
+	color: #999999;
+}
+
+textarea:-moz-placeholder { 
+	color: #999999;
+	opacity: 1;
+}
+
+textarea::-moz-placeholder { 
+	color: #999999;
+	opacity: 1;
+}
+
+textarea:-ms-input-placeholder { 
+	color: #999999;
+}
+
 
 /* Классы-подкладки скриншотов для вёрстки пиксель-перфёкт */
 .index::after,
@@ -67,6 +101,8 @@ form {
 	right: 0;
 	width: 60px;
 	height: 59px;
+	/* Чтобы стикер "New"не перекрывал правый верхний уголок кнопки "Купить" */
+	z-index: 2;
 
 	background: url("../img/new-label.png") no-repeat;
 }
@@ -98,6 +134,7 @@ h2 {
 }
 
 h3 {
+	margin: 0;
 	margin-bottom: 30px;
 
 	vertical-align: top;
@@ -236,6 +273,7 @@ input[type="radio"]:checked:disabled + label::before  {
 	padding-left: 10px;
 	padding-right: 10px;
 	box-sizing: border-box;
+	border: none;
 
 	vertical-align: top;
 	text-align: center;
@@ -255,6 +293,7 @@ input[type="radio"]:checked:disabled + label::before  {
 
 .btn:active {
 	background-color: #ba2732;
+	outline: none;
 }
 
 .btn-2 {
@@ -283,6 +322,11 @@ input[type="radio"]:checked:disabled + label::before  {
 
 .btn-2:active {
 	border-color: #ee3643;
+	outline: none;
+}
+
+.btn:focus,
+.btn-2:focus {
 	outline: none;
 }
 
@@ -1115,13 +1159,16 @@ a.main-logo:active::after {
 .slider-promo {
 	position: relative;
 	float: left;
+	width: 620px;
 	max-width: 620px;
+	height: 266px;
 	max-height: 266px;
 	margin-bottom: 53px;
 	overflow: hidden;
 }
 
 .slider-promo .slide {
+	display: none;
 	position: relative;
 	box-sizing: border-box;
 	width: 620px;
@@ -1168,6 +1215,7 @@ a.main-logo:active::after {
 .slider-promo .nav-arrow {
 	position: absolute;
 	top: 50%;
+	z-index: 2;
 
 	cursor: pointer;
 }
@@ -1186,12 +1234,16 @@ a.main-logo:active::after {
 	color: #ffffff;
 }
 
-.switcher {
+.slider-switcher {
 	position: absolute;
 	bottom: 36px;
-	left: 0;
-	width: 100%;
+	left: 50%;
+	width: auto;
 	padding: 0;
+
+	-webkit-transform: translateX(-50%);
+      	-ms-transform: translateX(-50%);
+          	transform: translateX(-50%);
 
 	list-style: none;
 
@@ -1200,24 +1252,45 @@ a.main-logo:active::after {
 	line-height: 0;
 }
 
-.switcher li {
+.slider-switcher li {
 	display: inline-block;
-	width: 6px;
-	height: 6px;
-	border: 2px solid #ffffff;
 
 	vertical-align: top;
-	border-radius: 50%;
-	background-color: #ee3643;
-	cursor: pointer;
 }
 
-.switcher li:not(:last-child) {
+.slider-switcher li:not(:last-child) {
 	margin-right: 10px;
 }
 
-.switcher .current {
-	background-color: #ffffff; 
+.slider-switcher label {
+	display: block;
+	width: 6px;
+	height: 6px;
+	margin: 0;
+	padding: 0;
+	border: 2px solid #ffffff;
+
+	border-radius: 50%;
+	background-color: #ffffff;
+	cursor: pointer;
+}
+
+/* Переключение слайдов в главном слайдере */
+
+#slider-switcher-1:checked ~ .slider-switcher label[for="slider-switcher-1"] {
+	background-color: #ee3643;
+}
+
+#slider-switcher-1:checked ~ .slider-promo-slides > .slide:nth-child(1) {
+	display: block;
+}
+
+#slider-switcher-2:checked ~ .slider-switcher label[for="slider-switcher-2"] {
+	background-color: #ee3643;
+}
+
+#slider-switcher-2:checked ~ .slider-promo-slides > .slide:nth-child(2) {
+	display: block;
 }
 
 .slide .btn {
@@ -1435,6 +1508,9 @@ a.main-logo:active::after {
 }
 
 .item-buttons .buy {
+	/* Чтобы стикер "New"не перекрывал правый верхний уголок кнопки "Купить" */
+	z-index: 3; 
+
 	background: #63a63e;
 	box-shadow: inset 0 -3px 0 0 rgba(0,0,0,0.25);
 }
@@ -1585,7 +1661,7 @@ a.main-logo:active::after {
 	padding: 0;
 }
 
-.services-tabs a {
+.services-tabs label {
 	display: block;
 	margin: 0;
 	padding-top: 15px;
@@ -1595,6 +1671,8 @@ a.main-logo:active::after {
 	border-bottom: 1px solid #293449;
 	
 	text-decoration: none;
+	text-transform: none;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 25px;
@@ -1602,25 +1680,15 @@ a.main-logo:active::after {
 	background: #32425c;
 }
 
-.services-tabs a:hover {
+.services-tabs label:hover {
 	background: #293449;
-}
-
-.services-tabs .current {
-	border-color: #ffffff;
-	color: #32425c;
-	background: #ffffff;
-	cursor: default;
-}
-
-.services-tabs .current:hover {
-	background: #ffffff;
 }
 
 .services-description {
 	position: relative;
 	float: right;
 	width: 620px;
+	padding-top: 48px;
 }
 
 .services-description p {
@@ -1628,7 +1696,8 @@ a.main-logo:active::after {
 	margin: 0;
 }
 
-[class^="services-description-"] {
+.services-description .tab {
+	display: none;
 	min-height: 281px;
 
 	background-position: right top;
@@ -1645,6 +1714,41 @@ a.main-logo:active::after {
 
 .services-description-credit {
 	background-image: url("../img/services-credit.jpg");
+}
+
+/* Переключение вкладок описания сервисов */
+
+#services-switcher-1:checked ~ .services-tabs label[for="services-switcher-1"] {
+	border-color: #ffffff;
+	color: #32425c;
+	background: #ffffff;
+	cursor: default;
+}
+
+#services-switcher-1:checked ~ .services-description > .tab:nth-child(1) {
+	display: block;
+}
+
+#services-switcher-2:checked ~ .services-tabs label[for="services-switcher-2"] {
+	border-color: #ffffff;
+	color: #32425c;
+	background: #ffffff;
+	cursor: default;
+}
+
+#services-switcher-2:checked ~ .services-description > .tab:nth-child(2) {
+	display: block;
+}
+
+#services-switcher-3:checked ~ .services-tabs label[for="services-switcher-3"] {
+	border-color: #ffffff;
+	color: #32425c;
+	background: #ffffff;
+	cursor: default;
+}
+
+#services-switcher-3:checked ~ .services-description > .tab:nth-child(3) {
+	display: block;
 }
 
 .services-description .btn {
@@ -2057,4 +2161,250 @@ ul.pagination {
 .about-category p {
 	padding: 0;
 	margin: 0;
+}
+
+
+
+/*	ПОПАП-ФОРМЫ ------------------------------------------- */
+
+/*	ПОПАП-ФОРМЫ: Общие стили ------------------------------ */
+
+.popup-content .popup {
+	position: fixed;
+	left: 50%;
+	padding-top: 46px;
+	border-top: 7px solid #ee3643;
+	z-index: 10;
+
+	background-color: #ffffff;
+	box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
+}
+
+.popup-content .popup-content-close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	border: none;
+	width: 22px;
+	height: 22px;
+
+	font-size: 0;
+	background-color: transparent;
+	outline: none;
+}
+
+.popup-content .popup-content-close::before,
+.popup-content .popup-content-close::after {
+ 	content: "";
+ 	position: absolute;
+ 	top: 8px;
+ 	right: -1px;
+ 	width: 25px;
+ 	height: 5px;
+
+	background-color: #ee3643;
+ }
+
+.popup-content .popup-content-close:hover::before,
+.popup-content .popup-content-close:hover::after {
+	background-color: #000000;
+ }
+
+.popup-content .popup-content-close::before {
+	-webkit-transform: rotate(45deg);
+      	-ms-transform: rotate(45deg);
+          	transform: rotate(45deg);
+}
+
+.popup-content .popup-content-close::after {
+	-webkit-transform: rotate(-45deg);
+      	-ms-transform: rotate(-45deg);
+          	transform: rotate(-45deg);
+}
+
+.popup-content .popup-content-main {
+	min-height: 59px;
+	padding-bottom: 38px;
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+.form-multiple-columns {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	margin-bottom: 21px;
+}
+
+.form-multiple-columns-column {
+	display: table-cell;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.form-multiple-columns .form-multiple-columns-column:first-child {
+	padding-left: 0;
+}
+
+.form-multiple-columns .form-multiple-columns-column:last-child {
+	padding-right: 0;
+}
+
+.popup-content label {
+	margin: 0;
+	margin-bottom: 9px;
+	padding: 0;
+
+	vertical-align: top;
+	text-transform: none;
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 18px;
+	line-height: 18px;
+	cursor: auto;
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="email"],
+.popup-content textarea {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 14px;
+	padding-right: 14px;
+	border: 2px solid #d7dcde;
+
+	border-radius: 3px;
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.popup-content input[type="text"]:focus,
+.popup-content input[type="email"]:focus,
+.popup-content textarea:focus {
+	border: 2px solid #b5b5b5;	
+	outline: none;
+}
+
+.popup-content .popup-content-btns {
+	padding-top: 37px;
+	padding-bottom: 37px;
+	padding-left: 80px;
+	padding-right: 80px;
+
+	font-size: 0;
+	background-color: #f1f1f1;
+}
+
+
+/*	ПОПАП-ФОРМЫ: Обратная связь --------------------------- */
+
+.popup-content .popup-content-feedback {
+	display: none;
+	top: 88px;
+	top: 0;
+	width: 620px;
+	margin-left: -310px;
+}
+
+.popup-content-feedback textarea {
+	min-width: 100%;
+	height: 114px;
+	min-height: 114px; 
+}
+
+.popup-content-feedback .btn {
+	width: 100%;
+}
+
+
+/*	ПОПАП-ФОРМЫ: Карта ------------------------------------ */
+
+.popup-content .popup-content-map {
+	display: none;
+	position: absolute;
+	top: 2348px;
+	width: 940px;
+	height: 446px;
+	margin-left: -470px;
+	padding: 0;
+	border-top: none;
+
+	background: url("../img/map-big.jpg") no-repeat 0 0;
+	box-shadow: 0 0 16px 8px rgba(35, 31, 32, 0.5);
+}
+
+
+/*	ПОПАП-ФОРМЫ: Добавлено в корзину ---------------------- */
+
+.popup-content .popup-content-cart-plus {
+	display: none;
+	top: 88px;
+	width: 620px;
+	margin-left: -310px;
+}
+
+.popup-content-cart-plus .popup-title {
+	position: relative;
+	margin: 0;
+	margin-top: 20px;
+	padding: 0;
+	padding-left: 100px;
+
+	vertical-align: top;
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 30px;
+	line-height: 27px;
+}
+
+.popup-content-cart-plus .popup-title::before {
+	content: "";
+	position: absolute;
+	left: 1px;
+	top: -18px;
+	width: 64px;
+	height: 64px;
+
+	border-radius: 50%;
+	background-color: #63a63e;
+}
+
+.popup-content-cart-plus .popup-title::after {
+	content: "";
+	position: absolute;
+	top: -6px;
+	left: 24px;
+	width: 14px;
+	height: 28px;
+	border-bottom: 7px solid white;
+	border-right: 7px solid white;
+
+	-webkit-transform: rotate(45deg);
+      	-ms-transform: rotate(45deg);
+          	transform: rotate(45deg);
+}
+
+.popup-content-cart-plus .btn {
+	width: 220px;
+	margin-right: 20px;
+}
+
+.popup-content-cart-plus .btn:last-child {
+	margin-right: 0;
+}
+
+.popup-content-cart-plus .btn-continue {
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.popup-content-cart-plus .btn-continue:hover {
+	color: #ee3643;
+}
+
+.popup-content-cart-plus .btn-continue:active {
+	background-color: rgba(255, 255, 255, 0.75);
 }

@@ -95,21 +95,29 @@
 						</div>
 					</section>
 					<section class="slider-promo">
-						<div class="slide perforator">
-							<h1>Перфораторы</h1>
-							<p class="description">Настроящие мужские игрушки</p>
-							<a class="btn" href="#">Открыть каталог</a>
-						</div>
-						<div class="slide drill">
-							<h1>Дрели</h1>
-							<p class="description">На радость соседям!</p>
-							<a class="btn" href="#">Открыть каталог</a>
-						</div>
 						<div class="nav-arrow icon-left"></div>
 						<div class="nav-arrow icon-right"></div>
-						<ul class="switcher">
-							<li class="current"></li>
-							<li></li>
+						<input type="radio" name="toggle-slider" id="slider-switcher-1" checked>
+						<input type="radio" name="toggle-slider" id="slider-switcher-2">
+						<div class="slider-promo-slides">
+							<div class="slide perforator">
+								<h1>Перфораторы</h1>
+								<p class="description">Настроящие мужские игрушки</p>
+								<a class="btn" href="#">Открыть каталог</a>
+							</div>
+							<div class="slide drill">
+								<h1>Дрели</h1>
+								<p class="description">На радость соседям!</p>
+								<a class="btn" href="#">Открыть каталог</a>
+							</div>
+						</div>
+						<ul class="slider-switcher">
+							<li>
+								<label for="slider-switcher-1"></label>
+							</li>
+							<li>
+								<label for="slider-switcher-2"></label>
+							</li>
 						</ul>
 					</section>
 					<section class="features">
@@ -223,26 +231,29 @@
 				<div class="container clearfix">
 					<h2>Сервисы</h2>
 					<p class="intro">Хороший интернет-магазин отличается от плохого не только ценами!<br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+					<input type="radio" name="toggle-services" id="services-switcher-1" checked>
+					<input type="radio" name="toggle-services" id="services-switcher-2">
+					<input type="radio" name="toggle-services" id="services-switcher-3">
 					<ul class="services-tabs">
 						<li>
-							<a class="current" href="#">Доставка</a>
+							<label for="services-switcher-1">Доставка</label>
 						</li>
 						<li>
-							<a href="#">Гарантия</a>
+							<label for="services-switcher-2">Гарантия</label>
 						</li>
 						<li>
-							<a href="#">Кредит</a>
+							<label for="services-switcher-3">Кредит</label>
 						</li>
 					</ul>
 					<section class="services-description">
-						<div class="services-description-delivery">
+						<div class="tab services-description-delivery">
 							<h3>Доставка</h3>
 							<p> Мы с удовольствием доставим ваш товар прямо<br>
 							к вашему подъезду совершенно бесплатно!<br>
 							Ведь мы неплохо заработаем,<br>
 							поднимая его на ваш на этаж!</p>
 						</div>
-						<!-- <div class="services-description-guaranty">
+						<div class="tab services-description-guaranty">
 							<h3>Гарантия</h3>
 							<p>Если купленный у нас товар поломается или заискрит,<br>
 							а также в случае пожара, спровоцированного его возгаранием,<br>
@@ -250,12 +261,12 @@
 							сгоревший товар на новый.<br>
 							Дом уж восстановите как-нибудь сами.</p>
 						</div>
-						<div class="services-description-credit">
+						<div class="tab services-description-credit">
 							<h3>Кредит</h3>
 							<p>Залезть в долговую яму стало проще!<br>
 							Кредитные консультанты придут вам на помощь.</p>
 							<a class="btn" href="#">Отправить заявку</a>
-						</div> -->
+						</div>
 					</section>
 				</div>
 			</div>
@@ -364,5 +375,32 @@
 				</div>
 			</div>
 		</footer>
+		<div class="popup-content">
+			<article class="popup-content-feedback popup">
+				<button class="popup-content-close" type="button">Закрыть</button>
+				<form action="http://echo.htmlacademy.ru" method="post">
+					<section class="popup-content-main">
+						<div class="form-multiple-columns">
+							<div class="form-multiple-columns-column">
+								<label for="sender-name-field">Ваше имя:</label>
+								<input type="text" name="sender-name" id="sender-name-field" placeholder="Представьтесь, пожалуйста" required>		
+							</div>
+							<div class="form-multiple-columns-column">
+								<label for="sender-email-field">Ваш e-mail:</label>
+								<input type="email" name="sender-email" id="sender-email-field" placeholder="Для отправки ответа" required>
+							</div>
+						</div>
+						<label for="sender-message-field">Текст письма:</label>
+						<textarea name="sender-message" id="sender-message-field" cols="20" rows="5" placeholder="В свободной форме"></textarea>
+					</section>
+					<section class="popup-content-btns">
+						<button type="submit" class="btn"><span>Отправить</span></button>
+					</section>
+				</form>
+			</article>
+			<article class="popup-content-map popup">
+				<button class="popup-content-close" type="button">Закрыть</button>
+			</article>
+		</div>
 	</body>
 </html>
