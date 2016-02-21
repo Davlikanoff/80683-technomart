@@ -23,10 +23,10 @@
 					</form>
 					<ul class="main-header-shop-functions">
 						<li>
-							<a class="favorites" href="#">Закладки: 0</a>
+							<a class="favorites" href="#" id="favorites-state">Закладки: 0</a>
 						</li>
 						<li>
-							<a class="cart" href="#">Корзина: 0</a>
+							<a class="cart" href="#" id="cart-state">Корзина: 0</a>
 						</li>
 						<li>
 							<a class="order" href="#">Оформить заказ</a>
@@ -53,7 +53,7 @@
 				<nav class="main-header-navigation container">
 					<ul>
 						<li>
-							<a href="#">Главная</a>
+							<a href="index.html">Главная</a>
 						</li>
 						<li>
 							<a href="#">Компания</a>
@@ -145,7 +145,9 @@
 							</section>
 							<a class="title" href="#">Перфоратор BOSCH BFG&nbsp;9000</a>
 							<div class="price-old">32500 Р.</div>
-							<div class="price">25500 Р.</div>
+							<div class="price">
+								<span>25500 Р.</span>
+							</div>
 						</article>
 						<article class="item">
 							<img src="img/shop-item-preview-2.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 3000">
@@ -155,7 +157,9 @@
 							</section>
 							<a class="title" href="#">Перфоратор BOSCH BFG&nbsp;3000</a>
 							<div class="price-old">22500 Р.</div>
-							<div class="price">15500 Р.</div>
+							<div class="price">
+								<span>15500 Р.</span>
+							</div>
 						</article>
 						<article class="item">
 							<img src="img/shop-item-preview-3.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 6000">
@@ -165,7 +169,9 @@
 							</section>
 							<a class="title" href="#">Перфоратор BOSCH BFG&nbsp;6000</a>
 							<div class="price-old">30500 Р.</div>
-							<div class="price">25500 Р.</div>
+							<div class="price">
+								<span>25500 Р.</span>
+							</div>
 						</article>
 						<article class="item new">
 							<img src="img/shop-item-preview-2.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 2000">
@@ -174,7 +180,9 @@
 								<a class="btn add-to-fav" href="#">В закладки</a>
 							</section>
 							<a class="title" href="#">Перфоратор BOSCH BFG&nbsp;2000</a>
-							<div class="price">12500 Р.</div>
+							<div class="price">
+								<span>12500 Р.</span>
+							</div>
 						</article>
 					</section>
 				</section>
@@ -288,11 +296,11 @@
 					<p>Вы можете забрать товар сами,<br>
 					заехав в наш офис:</p>
 					<div class="map">
-						<a href="#">
+						<a href="#" id="show-popup-map">
 							<img src="img/map-index.jpg" width="300" height="158" alt="Карта">
 						</a>
 					</div>
-					<a  class="btn" href="#">Заблудились? Напишите нам!</a>
+					<a class="btn" id="show-popup-feedback" href="#">Заблудились? Напишите нам!</a>
 				</section>
 			</div>
 		</main>
@@ -376,9 +384,19 @@
 			</div>
 		</footer>
 		<div class="popup-content">
+			<article class="popup-content-cart-plus popup">
+				<button class="popup-content-close" type="button" id="hide-popup-cart-plus">Закрыть</button>
+				<section class="popup-content-main">
+					<p class="popup-title">Товар добавлен в корзину!</p>
+				</section>
+				<section class="popup-content-btns">
+					<a href="#" class="btn">Оформить заказ</a>
+					<a href="#" class="btn btn-continue">Продолжить покупки</a>
+				</section>
+			</article>
 			<article class="popup-content-feedback popup">
-				<button class="popup-content-close" type="button">Закрыть</button>
-				<form action="http://echo.htmlacademy.ru" method="post">
+				<button class="popup-content-close" type="button" id="hide-popup-feedback">Закрыть</button>
+				<form action="http://echo.htmlacademy.ru" method="post" id="form-feedback">
 					<section class="popup-content-main">
 						<div class="form-multiple-columns">
 							<div class="form-multiple-columns-column">
@@ -399,8 +417,10 @@
 				</form>
 			</article>
 			<article class="popup-content-map popup">
-				<button class="popup-content-close" type="button">Закрыть</button>
+				<button class="popup-content-close" type="button" id="hide-popup-map">Закрыть</button>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.599104365163!2d30.32089461647513!3d59.938794181876176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1456009576694" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</article>
 		</div>
+		<script src="js/script.js"></script>
 	</body>
 </html>

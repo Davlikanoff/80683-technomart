@@ -85,6 +85,7 @@ textarea:-ms-input-placeholder {
 	width: 940px;
 	margin: 0 auto;
 	padding: 0 10px;
+	/*overflow: hidden;*/
 }
 
 article,
@@ -1066,6 +1067,7 @@ a.main-logo:active::after {
 
 
 .main-page {
+	width: 100%;
 	padding-bottom: 86px;
 }
 
@@ -1436,17 +1438,20 @@ a.main-logo:active::after {
 }
 
 .item .price {
-	display: inline-block;
 	position: absolute;
 	bottom: 21px;
-	left: 50%;
+	left: 0;
+	width: 100%;
+
+	text-align: center;
+}
+
+.item .price span {
+	position: relative;
+	display: inline-block;
 	min-width: 110px;
 	padding-top: 9px;
 	padding-bottom: 10px;
-
-	-webkit-transform: translateX(-50%);
-      	-ms-transform: translateX(-50%);
-          	transform: translateX(-50%);
 
 	vertical-align: top;
 	font-family: "PT Sans", "Arial", sans-serif;
@@ -1457,7 +1462,7 @@ a.main-logo:active::after {
 	background: #ee3643;
 }
 
-.item .price::before {
+.item .price span::before {
 	content: "";
 	position: absolute;
 	left: -12px;
@@ -1470,7 +1475,7 @@ a.main-logo:active::after {
 	background: #ee3643;
 }
 
-.item .price::after {
+.item .price span::after {
 	content: "";
 	position: absolute;
 	right: -18px;
@@ -2172,6 +2177,7 @@ ul.pagination {
 .popup-content .popup {
 	position: fixed;
 	left: 50%;
+	top: 50%;
 	padding-top: 46px;
 	border-top: 7px solid #ee3643;
 	z-index: 10;
@@ -2304,10 +2310,12 @@ ul.pagination {
 
 .popup-content .popup-content-feedback {
 	display: none;
-	top: 88px;
-	top: 0;
 	width: 620px;
 	margin-left: -310px;
+	
+	-webkit-transform: translateY(-50%);
+      	-ms-transform: translateY(-50%);
+          	transform: translateY(-50%);
 }
 
 .popup-content-feedback textarea {
@@ -2333,7 +2341,7 @@ ul.pagination {
 	padding: 0;
 	border-top: none;
 
-	background: url("../img/map-big.jpg") no-repeat 0 0;
+	background: grey url("../img/map-big.jpg") no-repeat 0 0;
 	box-shadow: 0 0 16px 8px rgba(35, 31, 32, 0.5);
 }
 
@@ -2342,9 +2350,12 @@ ul.pagination {
 
 .popup-content .popup-content-cart-plus {
 	display: none;
-	top: 88px;
 	width: 620px;
 	margin-left: -310px;
+
+	-webkit-transform: translateY(-50%);
+      	-ms-transform: translateY(-50%);
+          	transform: translateY(-50%);
 }
 
 .popup-content-cart-plus .popup-title {
@@ -2407,4 +2418,52 @@ ul.pagination {
 
 .popup-content-cart-plus .btn-continue:active {
 	background-color: rgba(255, 255, 255, 0.75);
+}
+
+
+/*	ПОПАП-ФОРМЫ: Показываем попап-формы ------------------- */
+
+.popup-content .popup-show {
+	display: block;
+	-webkit-animation: popup-appearance 0.3s;
+			animation: popup-appearance 0.3s;
+	-webkit-animation-timing-function: cubic-bezier(.16, -0.38, 0, 1.18);
+    	    animation-timing-function: cubic-bezier(.16, -0.38, 0, 1.18);
+}
+
+
+/*	ПОПАП-ФОРМЫ: Трясём в случае ошибки заполнения -------- */
+
+.popup-content .popup-error {
+	-webkit-animation: popup-error 0.3s;
+			animation: popup-error 0.3s;
+}
+
+
+/*	ПОПАП-ФОРМЫ: Анимация появления ----------------------- */
+
+@keyframes popup-appearance {
+	0% {
+	  	-webkit-transform: translateY(150%);
+	      	-ms-transform: translateY(150%);
+	          	transform: translateY(150%);
+	}
+}
+
+@keyframes popup-error {
+	0%, 100% {
+		-webkit-transform: translate(0, -50%);
+	      	-ms-transform: translate(0, -50%);
+	          	transform: translate(0, -50%);
+	}
+	10%, 30%, 50%, 70%, 90% {
+		-webkit-transform: translate(-10px, -50%);
+	      	-ms-transform: translate(-10px, -50%);
+	          	transform: translate(-10px, -50%);
+	}
+	20%, 40%, 60%, 80% {
+		-webkit-transform: translate(10px, -50%);
+	      	-ms-transform: translate(10px, -50%);
+	          	transform: translate(10px, -50%);
+	}
 }
