@@ -88,7 +88,6 @@ for ( i=0; i < linksPopupCartPlus.length; i++ ) {
 			linkCartState.classList.add("selected");
 		}
 		popupCartPlus.classList.add("popup-show");
-		// console.log("Buy button pressed!");
 	});
 }
 

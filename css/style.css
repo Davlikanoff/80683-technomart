@@ -53,28 +53,6 @@ textarea:-ms-input-placeholder {
 	color: #999999;
 }
 
-
-/* Классы-подкладки скриншотов для вёрстки пиксель-перфёкт */
-.index::after,
-.catalog::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 3151px;
-	z-index: -1;
-
-	background: url("../img/bg-screenshot-index.jpg") no-repeat 50% 0;
-	opacity: 0.85;
-}
-
-.catalog::after {
-	height: 2249px;
-
-	background: url("../img/bg-screenshot-catalogue.jpg") no-repeat 50% 0;
-}
-
 .clearfix:after {
 	content: "";
 	display: table;
@@ -85,7 +63,6 @@ textarea:-ms-input-placeholder {
 	width: 940px;
 	margin: 0 auto;
 	padding: 0 10px;
-	/*overflow: hidden;*/
 }
 
 article,
@@ -185,7 +162,7 @@ fieldset label:last-child {
 	margin-bottom: 0;
 }
 
-label {
+label:not(.nav-arrow) {
 	position: relative;
 	display: block;
 	margin: 0;
@@ -208,7 +185,7 @@ input[type="radio"] {
 }
 
 input[type="checkbox"] + label::before,
-input[type="radio"] + label::before {
+input[type="radio"] + label:not(.nav-arrow)::before {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -224,7 +201,7 @@ input[type="radio"] + label::before {
 }
 
 input[type="checkbox"] + label:hover::before,
-input[type="radio"] + label:hover::before {
+input[type="radio"] + label:not(.nav-arrow):hover::before {
 	color: #b5b5b5;
 	opacity: 1;
 }
@@ -256,12 +233,12 @@ input[type="checkbox"]:checked:disabled + label::before  {
 	content: "\2611";
 }
 
-input[type="radio"] + label::before,
+input[type="radio"] + label:not(.nav-arrow)::before,
 input[type="radio"]:disabled + label::before {
 	content: "\25cb";
 }
 
-input[type="radio"]:checked + label::before,
+input[type="radio"]:checked + label:not(.nav-arrow)::before,
 input[type="radio"]:checked:disabled + label::before  {
 	content: "\25cf";
 }
@@ -367,32 +344,109 @@ button span {
   speak: none;
 }
 
-.icon-left::before { content: "\3c"; } /* "&lt;" */
-.icon-right::before { content: "\3e"; } /* "&gt;" */
-.icon-cart::before { content: "\62"; } /* "b" */
-.icon-fb::before { content: "\66"; } /* "f" */
-.icon-twitter::before { content: "\74"; } /* "t" */
-.icon-vk::before { content: "\76"; } /* "v" */
-.icon-up::before { content: "\2c4"; } /* "˄" */
-.icon-down::before { content: "\2c5"; } /* "˅" */
-.icon-left-big::before { content: "\2190"; } /* "←" */
-.icon-right-big::before { content: "\2192"; } /* "→" */
-.icon-login::before { content: "\2386"; } /* "⎆" */
-.icon-logout::before { content: "\241b"; } /* "␛" */
-.icon-up-dir::before { content: "\25b2"; } /* "▲" */
-.icon-down-dir::before { content: "\25bc"; } /* "▼" */
-.icon-circle::before { content: "\25cb"; } /* "○" */
-.icon-circle-dot::before { content: "\25cf"; } /* "●" */
-.icon-star::before { content: "\2605"; } /* "★" */
-.icon-check-off::before { content: "\2610"; } /* "☐" */
-.icon-check-on::before { content: "\2611"; } /* "☑" */
-.icon-youtube::before { content: "\f39e"; } /* "" */
-.icon-home::before { content: "🏠"; } /* "\1f3e0" */
-.icon-user::before { content: "👨"; } /* "\1f468" */
-.icon-phone::before { content: "📞"; } /* "\1f4de" */
-.icon-insta::before { content: "📷"; } /* "\1f4f7" */
-.icon-bookmark::before { content: "\1f516"; } /* "\1f516" */
-.icon-search::before { content: "\1f50d"; }
+.icon-left::before { 
+	content: "\3c";
+}
+
+.icon-right::before { 
+	content: "\3e";
+} 
+
+.icon-cart::before { 
+	content: "\62";
+}
+
+.icon-fb::before { 
+	content: "\66";
+}
+
+.icon-twitter::before { 
+	content: "\74";
+}
+
+.icon-vk::before { 
+	content: "\76";
+}
+
+.icon-up::before { 
+	content: "\2c4";
+}
+
+.icon-down::before { 
+	content: "\2c5";
+}
+
+.icon-left-big::before { 
+	content: "\2190";
+}
+
+.icon-right-big::before { 
+	content: "\2192";
+}
+
+.icon-login::before { 
+	content: "\2386";
+}
+
+.icon-logout::before { 
+	content: "\241b";
+}
+
+.icon-up-dir::before { 
+	content: "\25b2";
+}
+
+.icon-down-dir::before { 
+	content: "\25bc";
+}
+
+.icon-circle::before { 
+	content: "\25cb";
+}
+
+.icon-circle-dot::before { 
+	content: "\25cf";
+}
+
+.icon-star::before { 
+	content: "\2605";
+}
+
+.icon-check-off::before { 
+	content: "\2610";
+}
+
+.icon-check-on::before { 
+	content: "\2611";
+}
+
+.icon-youtube::before { 
+	content: "\f39e";
+}
+
+.icon-home::before { 
+	content: "\1f3e0";
+}
+
+.icon-user::before { 
+	content: "\1f468";
+}
+
+.icon-phone::before { 
+	content: "\1f4de"; 
+}
+
+.icon-insta::before { 
+	content: "\1f4f7"; 
+}
+
+.icon-bookmark::before { 
+	content: "\1f516"; 
+}
+
+.icon-search::before { 
+	content: "\1f50d"; 
+}
 
 
 /*	ОБЩИЕ СТИЛИ: Шапка (Верхняя часть) -------------------- */
@@ -1394,6 +1448,8 @@ a.main-logo:active::after {
 }
 
 .item img {
+	width: 218px;
+	height: 160px;
 	margin-bottom: 18px;
 
 	vertical-align: top;
@@ -2449,6 +2505,9 @@ ul.pagination {
 	          	transform: translateY(150%);
 	}
 }
+
+
+/*	ПОПАП-ФОРМЫ: Анимация при ошибке ---------------------- */
 
 @keyframes popup-error {
 	0%, 100% {
