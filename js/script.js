@@ -30,14 +30,14 @@ if ( linkPopupFeedback ) {
 			inputEmailPopupFeedback.focus();
 		} else {
 			inputNamePopupFeedback.focus();
-		};
+		}
 
 		if ( storageEmail ) {
 			inputEmailPopupFeedback.value = storageEmail;
 			inputMessagePopupFeedback.focus();
 		}
 	});
-};
+}
 
 // Клик по кнопке X(Закрыть) в окне попапа "Заблудились?"
 if ( btnClosePopupFeedback ) {
@@ -46,7 +46,7 @@ if ( btnClosePopupFeedback ) {
 		popupFeedback.classList.remove("popup-show");
 		popupFeedback.classList.remove("popup-error");
 	});
-};
+}
 
 // Запрещаем отправку пустой формы
 if ( formFeedback ) {
@@ -61,7 +61,7 @@ if ( formFeedback ) {
 			localStorage.setItem("email", inputEmailPopupFeedback.value);
 		}
 	});
-};
+}
 
 // Клик по мини-карте
 if ( linkPopupMap ) {
@@ -69,7 +69,7 @@ if ( linkPopupMap ) {
 		event.preventDefault(event);
 		popupMap.classList.add("popup-show");
 	});
-};
+}
 
 // Клик по кнопке X(Закрыть) в окне полной карты
 if ( btnClosePopupMap ) {
@@ -77,7 +77,7 @@ if ( btnClosePopupMap ) {
 		event.preventDefault(event);
 		popupMap.classList.remove("popup-show");
 	});
-};
+}
 
 // Клик по кнопке "Купить"
 for ( i=0; i < linksPopupCartPlus.length; i++ ) {
@@ -121,12 +121,12 @@ window.addEventListener("keydown", function(event) {
 				popupFeedback.classList.remove("popup-show");
 				popupFeedback.classList.remove("popup-error");
 			}
-		};
+		}
 		if ( popupMap ) {
 			if (popupMap.classList.contains("popup-show")) {
 				popupMap.classList.remove("popup-show");
 			}
-		};
+		}
 		if ( popupCartPlus ) {
 			if (popupCartPlus.classList.contains("popup-show")) {
 				popupCartPlus.classList.remove("popup-show");

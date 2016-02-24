@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Интернет-магазин «Техномарт»</title>
-		<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&subset=latin,cyrillic" rel="stylesheet" type="text/css">
 		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/style.min.css" rel="stylesheet">
 	</head>
@@ -13,9 +13,9 @@
 			<div class="main-header-top">
 				<div class="container clearfix">
 					<div class="main-header-logo">
-						<a class="main-logo" href="index.html">
+						<span class="logo-index">
 							<img src="img/logo-header.png" width="116" height="18" alt="Техномарт">
-						</a>
+						</span>
 					</div>
 					<form action="http://echo.htmlacademy.ru" method="get">
 						<input type="search" name="search-field" id="search" placeholder="Поиск:">
@@ -59,7 +59,7 @@
 							<a href="#">Компания</a>
 						</li>
 						<li>
-							<a href="#">Каталог</a>
+							<a href="catalogue.html">Каталог</a>
 						</li>
 						<li>
 							<a href="#">Новости</a>
@@ -103,7 +103,7 @@
 							<div class="slide perforator">
 								<h1>Перфораторы</h1>
 								<p class="description">Настроящие мужские игрушки</p>
-								<a class="btn" href="#">Открыть каталог</a>
+								<a class="btn" href="catalogue.html">Открыть каталог</a>
 							</div>
 							<div class="slide drill">
 								<h1>Дрели</h1>
@@ -138,9 +138,9 @@
 					</header>
 					<section class="items-list">
 						<article class="item">
-							<img src="img/shop-item-preview-1.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 9000">
+							<img class="preview-goods" src="img/shop-item-preview-1.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 9000">
 							<section class="item-buttons">
-								<a class="btn buy" href="#">Купить</a>
+								<a class="btn buy" href="/cart">Купить</a>
 								<a class="btn add-to-fav" href="#">В закладки</a>
 							</section>
 							<a class="title" href="#">Перфоратор BOSCH BFG&nbsp;9000</a>
@@ -150,9 +150,9 @@
 							</div>
 						</article>
 						<article class="item">
-							<img src="img/shop-item-preview-2.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 3000">
+							<img class="preview-goods" src="img/shop-item-preview-2.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 3000">
 							<section class="item-buttons">
-								<a class="btn buy" href="#">Купить</a>
+								<a class="btn buy" href="/cart">Купить</a>
 								<a class="btn add-to-fav" href="#">В закладки</a>
 							</section>
 							<a class="title" href="#">Перфоратор BOSCH BFG&nbsp;3000</a>
@@ -162,9 +162,9 @@
 							</div>
 						</article>
 						<article class="item">
-							<img src="img/shop-item-preview-3.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 6000">
+							<img class="preview-goods" src="img/shop-item-preview-3.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 6000">
 							<section class="item-buttons">
-								<a class="btn buy" href="#">Купить</a>
+								<a class="btn buy" href="/cart">Купить</a>
 								<a class="btn add-to-fav" href="#">В закладки</a>
 							</section>
 							<a class="title" href="#">Перфоратор BOSCH BFG&nbsp;6000</a>
@@ -174,9 +174,9 @@
 							</div>
 						</article>
 						<article class="item new">
-							<img src="img/shop-item-preview-2.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 2000">
+							<img class="preview-goods" src="img/shop-item-preview-2.jpg" width="218" height="160" alt="Перфоратор BOSCH BFG 2000">
 							<section class="item-buttons">
-								<a class="btn buy" href="#">Купить</a>
+								<a class="btn buy" href="/cart">Купить</a>
 								<a class="btn add-to-fav" href="#">В закладки</a>
 							</section>
 							<a class="title" href="#">Перфоратор BOSCH BFG&nbsp;2000</a>
@@ -308,9 +308,9 @@
 			<div class="container clearfix">
 				<div class="left-column">
 					<div class="main-footer-logo">
-						<a class="main-logo" href="index.html">
+						<span class="logo-index">
 							<img src="img/logo-footer.png" width="145" height="21" alt="Техномарт">
-						</a>
+						</span>
 					</div>
 					<div class="main-footer-contacts">
 						г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
@@ -327,7 +327,7 @@
 								<a href="#">Новости</a>
 							</li>
 							<li>
-								<a href="#">Каталог</a>
+								<a href="catalogue.html">Каталог</a>
 							</li>
 							<li>
 								<a href="#">Доставка</a>
@@ -346,7 +346,7 @@
 								<a href="#">Техника</a>
 							</li>
 							<li>
-								<a href="#">Инструмент</a>
+								<a href="catalogue.html">Инструмент</a>
 							</li>
 							<li>
 								<a href="#">Спецпредложения</a>
@@ -421,6 +421,6 @@
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.599104365163!2d30.32089461647513!3d59.938794181876176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1456009576694" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</article>
 		</div>
-		<script src="js/script.min.js"></script>
+		<script src="js/script.min.js"></script> 
 	</body>
 </html>
